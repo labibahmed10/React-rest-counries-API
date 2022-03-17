@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: beige;
+  padding: 10px;
+}
+
+.container img {
+  width: 100%;
+}

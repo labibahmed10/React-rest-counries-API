@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: rgb(201, 228, 197);
+  color: #055052;
+}
+
+.ullist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ullist li {
+  list-style: none;
+  margin-right: 15px;
+}
+
+.ullist li a {
+  text-decoration: none;
+  padding: 10px 4px;
+  font-weight: 600;
+}
