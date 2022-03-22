@@ -6,15 +6,16 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 
 const SingleCard = (props) => {
   const { img, name, price, ratings, seller } = props.shoe;
-  console.log(props);
 
-  const { item, prices, tax, grandTotal, setPrice, setTax, setItem, setgrandTotal } = props;
+  const { item, prices, tax, grandTotal, shipping, setPrice, setTax, setItem, setgrandTotal, setShipping } =
+    props;
 
   const updatePrice = () => {
     setItem(item + 1);
     setPrice(prices + price);
+    setShipping(prices < 1000 ? 10 : shipping + 10);
     setTax(tax + price * 0.1);
-    setgrandTotal(price + price * 0.1 + grandTotal);
+    setgrandTotal(price + grandTotal);
   };
 
   return (

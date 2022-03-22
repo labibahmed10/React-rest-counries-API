@@ -18,6 +18,7 @@ const Shop = () => {
   const [price, setPrice] = useState(0);
   const [grandTotal, setgrandTotal] = useState(0);
   const [tax, setTax] = useState(0);
+  const [shipping, setShipping] = useState(0);
 
   return (
     <section className="main-container">
@@ -30,16 +31,18 @@ const Shop = () => {
             tax={tax}
             prices={price}
             grandTotal={grandTotal}
+            shipping={shipping}
             setTax={setTax}
             setItem={setItem}
             setPrice={setPrice}
             setgrandTotal={setgrandTotal}
+            setShipping={setShipping}
           ></SingleCard>
         ))}
       </div>
 
       <div className="cart-container">
-        <Cart item={item} price={price} grandTotal={grandTotal} tax={tax}></Cart>
+        <Cart item={item} price={price} grandTotal={grandTotal} tax={tax} shipping={shipping}></Cart>
       </div>
     </section>
   );
