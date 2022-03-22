@@ -1,15 +1,17 @@
-// import logo from "./logo.svg";
+import "./App.css";
+import Header from "./Ema_components/Header/Header";
+import Shop from "./Ema_components/Shop/Shop";
 
-// import "./App.css";
-
-import Country from "./Components/Country/Country";
-import Navbar from "./Components/Navbar/Navbar";
+// import Country from "./Components/Country/Country";
+// import Navbar from "./Components/Navbar/Navbar";
+/*  <Navbar></Navbar>
+ <Country></Country>  */
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <Country></Country>
+      <Header></Header>
+      <Shop></Shop>
     </div>
   );
 }

@@ -24,18 +24,4 @@ const Country = () => {
   );
 };
 
-/* function ShowCountry(prop) {
-  console.log(prop);
-  return (
-    <div>
-      <div id="container">
-        <section>
-          <h2>{prop.name.common}</h2>
-          <img src={prop.flags.png} alt="" />
-        </section>
-      </div>
-    </div>
-  );
-} */
-
 export default Country;
