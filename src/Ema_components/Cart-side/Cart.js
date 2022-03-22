@@ -4,18 +4,19 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./Cart.css";
 
-const Cart = () => {
+const Cart = (props) => {
+  const { item, tax, price, grandTotal } = props;
+
   return (
     <section className="main-cart">
-    
       <div className="info-container">
         <h2>Order Summary</h2>
 
-        <p>Selected Items : </p>
-        <p>Total Price : </p>
-        <p>Total Shipping Charge : </p>
-        <p>Tax : </p>
-        <h3>Grand Total : $</h3>
+        <p>Selected Items : {item}</p>
+        <p>Total Price : ${price}</p>
+        <p>Total Shipping Charge : ${price < 1100 ? 15 : 25}</p>
+        <p>Tax : ${tax}</p>
+        <h3>Grand Total : ${grandTotal}</h3>
 
         <button className="btn-1">
           Clear Cart <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>{" "}
