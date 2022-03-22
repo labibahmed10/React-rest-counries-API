@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import OrderPre from "./Ema_components/Order_Preview/OrderPre";
 
 // import Country from "./Components/Country/Country";
 // import Navbar from "./Components/Navbar/Navbar";
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
+      <OrderPre></OrderPre>
       <Shop></Shop>
     </div>
   );

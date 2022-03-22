@@ -3,6 +3,7 @@ import "./SingleCard.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import setDataToLocalDb from "../LocalStorage/LocalDB";
 
 const SingleCard = (props) => {
   const { img, name, price, ratings, seller } = props.shoe;
@@ -11,6 +12,7 @@ const SingleCard = (props) => {
     props;
 
   const updatePrice = () => {
+    setDataToLocalDb(props);
     setItem(item + 1);
     setPrice(prices + price);
     setShipping(prices + shipping < 1000 ? 10 : shipping + 10);
@@ -21,7 +23,6 @@ const SingleCard = (props) => {
   return (
     <div
       data-aos="fade-up"
-      // data-aos-easing="ease-out-cubic"
       data-aos-duration="1000"
       data-aos-anchor-placement="center-bottom"
       className="cards"
