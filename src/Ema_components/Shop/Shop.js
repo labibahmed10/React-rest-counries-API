@@ -13,7 +13,6 @@ const Shop = () => {
   }, []);
 
   // cart money part
-
   const [item, setItem] = useState(0);
   const [price, setPrice] = useState(0);
   const [grandTotal, setgrandTotal] = useState(0);
@@ -42,7 +41,18 @@ const Shop = () => {
       </div>
 
       <div className="cart-container">
-        <Cart item={item} price={price} grandTotal={grandTotal} tax={tax} shipping={shipping}></Cart>
+        <Cart
+          setTax={setTax}
+          setItem={setItem}
+          setPrice={setPrice}
+          setgrandTotal={setgrandTotal}
+          setShipping={setShipping}
+          item={item}
+          price={price}
+          grandTotal={grandTotal}
+          tax={tax}
+          shipping={shipping}
+        ></Cart>
       </div>
     </section>
   );

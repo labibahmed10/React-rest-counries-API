@@ -5,7 +5,16 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import "./Cart.css";
 
 const Cart = (props) => {
-  const { item, tax, price, grandTotal, shipping } = props;
+  const { setPrice, setTax, setItem, setgrandTotal, setShipping, item, tax, price, grandTotal, shipping } =
+    props;
+
+  const clearingCart = () => {
+    setItem(item * 0);
+    setPrice(price * 0);
+    setShipping(shipping * 0);
+    setTax(tax * 0);
+    setgrandTotal(grandTotal * 0);
+  };
 
   return (
     <section className="main-cart">
@@ -18,7 +27,7 @@ const Cart = (props) => {
         <p>Tax : ${tax.toString().slice(0, 4)}</p>
         <h3>Grand Total : ${grandTotal + tax + shipping}</h3>
 
-        <button className="btn-1">
+        <button onClick={clearingCart} className="btn-1">
           Clear Cart <FontAwesomeIcon icon={faTrashAlt}></FontAwesomeIcon>{" "}
         </button>
 
